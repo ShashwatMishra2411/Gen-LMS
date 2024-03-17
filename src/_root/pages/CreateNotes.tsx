@@ -32,7 +32,7 @@ const CreateNotes = () => {
         console.log(requestBody)
 
         try {
-            const result = await axios.post('http://127.0.0.1:8000/create_curriculum/', requestBody);
+            const result = await axios.post('http://192.168.47.237:8000/create_curriculum/', requestBody);
             setResData(result.data.curriculum)
         } catch (error) {
             console.error(error);

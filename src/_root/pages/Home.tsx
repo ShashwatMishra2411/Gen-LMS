@@ -60,6 +60,7 @@ export default function Home() {
   ];
   const [timeline, setTimeline] = useState([]);
   useEffect(() => {
+    localStorage.setItem("userid", "rdbGKWQ5LPSTBbIBHT4p");
     const userItem = localStorage.getItem("user");
     if (userItem !== null) {
       const user = JSON.parse(userItem);
@@ -83,7 +84,6 @@ export default function Home() {
   console.log(currentDate);
   return (
     <>
-      // ...
       {loading ? (
         <InfinitySpin
           width="200"

@@ -41,7 +41,7 @@ const LeftSidebar = () => {
     if (userItem) {
         user = JSON.parse(userItem);
     }
-
+//@ts-ignore
     let userId: string | undefined;
     if (user) {
         userId = user.uid;

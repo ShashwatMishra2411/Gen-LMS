@@ -29,7 +29,7 @@ import { Submitted_Quiz, Quiz } from "@/lib/backend/User";
 
 export default function TeacherQuiz() {
   const { courseID } = useParams<string>();
-  const [setunAttemptedQuizzes] = useState<Quiz[]>([]);
+  const [unattemptedQuizzes, setunAttemptedQuizzes] = useState<Quiz[]>([]);
   const [attemptedQuizzes, setAttemptedQuizzes] = useState<Submitted_Quiz[]>(
     []
   );
@@ -37,7 +37,7 @@ export default function TeacherQuiz() {
   // console.log(courseID);
   useEffect(() => {
     async function fetchquiz() {
-      // console.log(unattemptedQuizzes)
+      console.log(unattemptedQuizzes)
       if (courseID) {
         const quizzes = await fetchStudentquiz(courseID);
         console.log("quiz", quizzes);
